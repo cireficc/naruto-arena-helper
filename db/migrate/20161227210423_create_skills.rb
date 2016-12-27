@@ -10,7 +10,7 @@ class CreateSkills < ActiveRecord::Migration[5.0]
       t.integer :bloodline_cost
       t.integer :ninjutsu_cost
       t.integer :genjutsu_cost
-      t.integer :taijutsu_cost
+      t.integer :random_cost
       t.boolean :alternates
       t.text :classes, array: true, default: []
       t.timestamps

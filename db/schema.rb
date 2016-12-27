@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20161227210423) do
     t.integer  "bloodline_cost"
     t.integer  "ninjutsu_cost"
     t.integer  "genjutsu_cost"
+    t.integer  "random_cost"
     t.boolean  "alternates"
     t.text     "classes",        default: [],              array: true
     t.datetime "created_at",                  null: false
