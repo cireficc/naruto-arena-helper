@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161227210038) do
+ActiveRecord::Schema.define(version: 20161227210423) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,23 @@ ActiveRecord::Schema.define(version: 20161227210038) do
     t.string   "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "skills", force: :cascade do |t|
+    t.integer  "ninja_id"
+    t.integer  "position"
+    t.string   "name"
+    t.string   "description"
+    t.integer  "cooldown"
+    t.integer  "taijutsu_cost"
+    t.integer  "bloodline_cost"
+    t.integer  "ninjutsu_cost"
+    t.integer  "genjutsu_cost"
+    t.boolean  "alternates"
+    t.text     "classes",        default: [],              array: true
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.index ["ninja_id"], name: "index_skills_on_ninja_id", using: :btree
   end
 
 end
