@@ -18,8 +18,9 @@ ActiveRecord::Schema.define(version: 20161227210423) do
   create_table "ninjas", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.text     "associations", default: [],              array: true
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   create_table "skills", force: :cascade do |t|
